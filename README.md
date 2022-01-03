@@ -26,3 +26,6 @@ number of record matches
 
 TestCase6- Given the States Code CSV file, Check to ensure the Number of Record matches.
 -This is Happy Test Case where the records are checked.
+
+TestCase7- Given the State Census CSV file incorrect, returns a custom exception.
+-This is Happy Test Case where the records are checked.

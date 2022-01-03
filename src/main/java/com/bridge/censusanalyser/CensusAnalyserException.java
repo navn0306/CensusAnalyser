@@ -8,7 +8,7 @@ public class CensusAnalyserException extends Throwable {
     public ExceptionType type;
 
     enum ExceptionType {
-        CENSUS_FILE_PROBLEM
+        CENSUS_FILE_PROBLEM;
     }
 
     public CensusAnalyserException(String message, ExceptionType type) {
