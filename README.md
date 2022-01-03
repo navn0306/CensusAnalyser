@@ -29,3 +29,6 @@ TestCase6- Given the States Code CSV file, Check to ensure the Number of Record 
 
 TestCase7- Given the State Census CSV file incorrect, returns a custom exception.
 -This is Happy Test Case where the records are checked.
+
+TestCase8- Given the State Code CSV file with incorrect type, Should throw exception.
+-This is a Sad Test Case to verify if the exception is raised.
