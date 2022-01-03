@@ -19,3 +19,7 @@ TestCase4- Given the State Census CSV file with Delimiter type, Should throw exc
 
 TestCase5- Given the State Census CSV file with incorrect ColumnName, Should throw exception.
 -This is a Sad Test Case to verify if the exception is raised.
+
+UseCase2- Ability for the analyser to load the Indian States Code Information from a csv file 
+- Create CSVStates Class to load the CSV Data - Use Iterator to load the data - Check with StateCensusAnalyser to ensure
+number of record matches

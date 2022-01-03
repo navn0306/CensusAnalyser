@@ -5,7 +5,7 @@ import com.opencsv.bean.CsvBindByName;
 public class IndiaCensusCSV {
 
     @CsvBindByName(column = "State")
-    private int state;
+    private String state;
 
     @CsvBindByName(column = "Population")
     private int population;
