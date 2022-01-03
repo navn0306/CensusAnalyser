@@ -13,7 +13,7 @@ import java.util.stream.StreamSupport;
 public class CensusAnalyser {
 
     public int loadIndiaCensusData(String csvPath) throws CensusAnalyserException {
-
+       
         try (Reader reader = Files.newBufferedReader(Paths.get(csvPath))){
             CsvToBeanBuilder<IndiaCensusCSV> csvCsvToBeanBuilder = new CsvToBeanBuilder<IndiaCensusCSV>(reader);
             csvCsvToBeanBuilder.withType(IndiaCensusCSV.class);

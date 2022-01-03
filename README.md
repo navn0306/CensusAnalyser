@@ -8,3 +8,7 @@ Ability for the analyser to load the Indian States Census Information from a csv
 TestCase1-
 Given the States Census CSV file, Check to ensure the Number of Record matches.
 -This is Happy Test Case where the records are checked.
+
+TestCase2-
+Given the State Census CSV file incorrect, returns a custom exception.
+-This is a Sad Test Case to verify if the exception is raised.
