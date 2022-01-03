@@ -117,7 +117,19 @@ public class CensusAnalyserTest {
         try {
             CensusAnalyser censusAnalyser = new CensusAnalyser();
             int numOfRecord = censusAnalyser.loadStateCodeData(INDIA_STATE_CODE_PATH);
-            Assert.assertEquals(29, numOfRecord);
+            Assert.assertEquals(37, numOfRecord);
+        } catch (Exception | CensusAnalyserException e) {
+
+        }
+    }
+
+    //10. Given the State Code CSV file with incorrect ColumnName, Should throw exception.
+    @Test
+    public void givenIndiaStateCodeCSVFile_WhenLoadedWithWrongColumn_ShouldThrowException() {
+        try {
+            CensusAnalyser censusAnalyser = new CensusAnalyser();
+            int numOfRecord = censusAnalyser.loadStateCodeData(INDIA_STATE_CODE_PATH);
+            Assert.assertEquals(37, numOfRecord);
         } catch (Exception | CensusAnalyserException e) {
 
         }

@@ -8,7 +8,7 @@ public class IndiaStateCodeCSV {
     private int srNo;
 
     @CsvBindByName(column = "State Name")
-    private String state;
+    private int state;
 
     @CsvBindByName(column = "TIN")
     private int tin;

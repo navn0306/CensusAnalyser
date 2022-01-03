@@ -35,3 +35,6 @@ TestCase8- Given the State Code CSV file with incorrect type, Should throw excep
 
 TestCase9- Given the State Code CSV file with Delimiter type, Should throw exception.
 -This is a Sad Test Case to verify if the exception is raised.
+
+TestCase10- Given the State Code CSV file with incorrect ColumnName, Should throw exception.
+-This is a Sad Test Case to verify if the exception is raised.
