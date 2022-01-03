@@ -13,3 +13,6 @@ TestCase2- Given the State Census CSV file incorrect, returns a custom exception
 
 TestCase3- Given the State Census CSV file with incorrect type, Should throw exception. 
 -This is a Sad Test Case to verify if the exception is raised.
+
+TestCase4- Given the State Census CSV file with Delimiter type, Should throw exception.
+-This is a Sad Test Case to verify if the exception is raised.
