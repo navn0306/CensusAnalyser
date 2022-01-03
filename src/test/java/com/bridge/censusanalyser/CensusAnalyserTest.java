@@ -51,8 +51,19 @@ public class CensusAnalyserTest {
     //Given the State Census CSV file with incorrect Delimiter, Should throw exception.
     @Test
     public void givenIndiaCensusCSVFile_WhenLoadedWithWrongDelimiter_ShouldThrowException() {
-        CensusAnalyser censusAnalyser = new CensusAnalyser();
         try {
+            CensusAnalyser censusAnalyser = new CensusAnalyser();
+            int numOfRecord = censusAnalyser.loadIndiaCensusData(INDIA_CENSUS_PATH_FILE);
+            Assert.assertEquals(29, numOfRecord);
+        } catch (Exception | CensusAnalyserException e) {
+
+        }
+    }
+    //Given the State Census CSV file with incorrect ColumnName, Should throw exception.
+    @Test
+    public void givenIndiaCensusCSVFile_WhenLoadedWithWrongColumn_ShouldThrowException() {
+        try {
+            CensusAnalyser censusAnalyser = new CensusAnalyser();
             int numOfRecord = censusAnalyser.loadIndiaCensusData(INDIA_CENSUS_PATH_FILE);
             Assert.assertEquals(29, numOfRecord);
         } catch (Exception | CensusAnalyserException e) {
