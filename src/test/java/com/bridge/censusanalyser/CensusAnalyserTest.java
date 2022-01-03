@@ -9,6 +9,7 @@ public class CensusAnalyserTest {
     private static final String INDIA_CENSUS_PATH_FILE = "C:\\Users\\Navneet\\Documents\\OOPs\\CensusAnalyser\\src\\main\\resources\\IndiaStateCensusData.csv";
     private static final String WRONG_CENSUS_PATH_FILE = "C:\\Users\\Navneet\\Documents\\OOPs\\CensusAnalyser\\src\\main\\resources\\IndiaStateCode.csv";
     private static final String TXT_CENSUS_PATH_FILE = "C:\\Users\\Navneet\\Documents\\OOPs\\CensusAnalyser\\src\\main\\resources\\IndiaStateCode.txt";
+    private static final String INDIA_STATE_CODE_PATH = "C:\\Users\\Navneet\\Documents\\OOPs\\CensusAnalyser\\src\\main\\resources\\IndiaStateCode.csv";
 
     //Given the States Census CSV file, Check to ensure the Number of Record matches.
     @Test
@@ -59,6 +60,7 @@ public class CensusAnalyserTest {
 
         }
     }
+
     //Given the State Census CSV file with incorrect ColumnName, Should throw exception.
     @Test
     public void givenIndiaCensusCSVFile_WhenLoadedWithWrongColumn_ShouldThrowException() {
@@ -67,6 +69,18 @@ public class CensusAnalyserTest {
             int numOfRecord = censusAnalyser.loadIndiaCensusData(INDIA_CENSUS_PATH_FILE);
             Assert.assertEquals(29, numOfRecord);
         } catch (Exception | CensusAnalyserException e) {
+
+        }
+    }
+
+    //Given the States Code CSV file, Check to ensure the Number of Record matches.
+    @Test
+    public void givenIndiaStateCodeCSVFile_WhenLoaded_ShouldReturnCorrectRecords() {
+        try {
+            CensusAnalyser censusAnalyser = new CensusAnalyser();
+            int numOfRecord = censusAnalyser.loadStateCodeData(INDIA_STATE_CODE_PATH);
+            Assert.assertEquals(37, numOfRecord);
+        } catch (CensusAnalyserException e) {
 
         }
     }

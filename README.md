@@ -23,3 +23,6 @@ TestCase5- Given the State Census CSV file with incorrect ColumnName, Should thr
 UseCase2- Ability for the analyser to load the Indian States Code Information from a csv file 
 - Create CSVStates Class to load the CSV Data - Use Iterator to load the data - Check with StateCensusAnalyser to ensure
 number of record matches
+
+TestCase6- Given the States Code CSV file, Check to ensure the Number of Record matches.
+-This is Happy Test Case where the records are checked.
